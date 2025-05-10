@@ -58,6 +58,7 @@ async function initializeConfig() {
 initializeConfig();
 
 // Routes
+app.get("/", (req, res) => res.send("Express on Vercel"));
 app.get('/api/data', async (req, res) => {
   try {
     // Get last 50 data points
