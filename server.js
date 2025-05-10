@@ -146,8 +146,16 @@ io.on('connection', (socket) => {
   });
 });
 
-// Start server
-const PORT = process.env.PORT || 5000;
-server.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+// // Start server
+// const PORT = process.env.PORT || 5000;
+// server.listen(PORT, () => {
+//   console.log(`Server running on port ${PORT}`);
+// });
+if (require.main === module) {
+  server.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
+
+// Export for serverless use
+module.exports = app;
