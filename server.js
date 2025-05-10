@@ -186,7 +186,7 @@ const connectToDatabase = async () => {
   }
 
   try {
-    const db = await mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/fan_controller', {
+    const db = await mongoose.connect('mongodb+srv://rohitdhanjee25:w2WdZrklapT9wJcm@iotcluster0.ckt2j.mongodb.net/', {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       serverSelectionTimeoutMS: 5000
